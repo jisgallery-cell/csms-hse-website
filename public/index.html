@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSMS HSE — PT Expro Yard Cibitung</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<!-- ============ AUTH SCREEN (login / register) ============ -->
+<div class="auth-wrap" id="auth-screen">
+  <div class="auth-card" id="auth-card">
+    <!-- filled by js/views/auth.js -->
+  </div>
+</div>
+
+<!-- ============ APP SCREEN ============ -->
+<div id="app-screen" style="display:none; width:100%;">
+  <div class="sidebar">
+    <div class="brand">
+      <div class="display">CSMS · HSE</div>
+      <div class="sub" id="brand-sub">PT EXPRO YARD CIBITUNG</div>
+    </div>
+    <nav id="nav-list"></nav>
+    <div class="sidebar-footer">v1.0 · JS Digital</div>
+  </div>
+
+  <div class="main">
+    <div class="hazard-strip"></div>
+    <div class="topbar">
+      <div>
+        <div class="title" id="topbar-title">Dashboard</div>
+        <div class="breadcrumb" id="topbar-breadcrumb">CSMS / OVERVIEW</div>
+      </div>
+      <div style="display:flex; align-items:center; gap:14px;">
+        <div class="notif-wrap">
+          <button class="notif-bell" id="notif-bell" title="Notifikasi">
+            🔔<span class="notif-badge hidden" id="notif-badge">0</span>
+          </button>
+          <div class="notif-panel hidden" id="notif-panel"></div>
+        </div>
+        <div class="user-chip" id="user-chip" title="Klik untuk keluar">
+          <div class="avatar" id="user-avatar">--</div>
+          <div>
+            <div class="name" id="user-name">-</div>
+            <div class="role" id="user-role">-</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content" id="view-root">
+      <!-- views injected here -->
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay hidden" id="modal-overlay">
+  <div class="modal" id="modal-box"></div>
+</div>
+
+<div class="toast-stack" id="toast-stack"></div>
+
+<script type="module" src="/js/app.js"></script>
+</body>
+</html>

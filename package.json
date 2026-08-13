@@ -1,0 +1,16 @@
+{
+  "name": "csms-hse-website",
+  "version": "1.0.0",
+  "description": "CSMS HSE - Contractor Safety Management System - Website Enterprise (JS Digital)",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "seed": "node server/seed.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {}
+}
